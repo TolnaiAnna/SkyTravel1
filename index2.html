@@ -165,14 +165,14 @@
 
         <p>Amint sikeresen kifizette bankkártyájával a jegyet, azonnal elküldjük Önnek az e-mailben a jegyvisszaigazolást. Így Ön gyorsan és kényelmesen hozzájuthat az utazási dokumentumokhoz, hogy zavartalanul élvezhesse tervezett utazását.</p>
         <form id="searchForm">
-            <label for="departure">Indulás ország:</label>
+            <label for="departure">Honnan:</label>
             <select id="departure" name="departure" required>
                 <option value="" disabled selected>Válasszon indulási országot</option>
                 <option value="Amszterdam">Amszterdam</option> <option value="Andorra la Vella">Andorra la Vella</option> <option value="Ankara">Ankara</option> <option value="Athén">Athén</option> <option value="Bécs">Bécs</option> <option value="Belgrád">Belgrád</option> <option value="Berlin">Berlin</option> <option value="Bern">Bern</option> <option value="Brüsszel">Brüsszel</option> <option value="Budapest">Budapest</option> <option value="Bukarest">Bukarest</option> <option value="Chișinău">Chișinău</option> <option value="Douglas (Man)">Douglas (Man)</option> <option value="Dublin">Dublin</option> <option value="Helsinki">Helsinki</option> <option value="Kijev">Kijev</option> <option value="Koppenhága">Koppenhága</option> <option value="Lisszabon">Lisszabon</option> <option value="Ljubljana">Ljubljana</option> <option value="London">London</option> <option value="Luxembourg">Luxembourg</option> <option value="Madrid">Madrid</option> <option value="Minszk">Minszk</option> <option value="Monaco (település)">Monaco (település)</option> <option value="Moszkva">Moszkva</option> <option value="Nicosia">Nicosia</option> <option value="Oslo">Oslo</option> <option value="Párizs">Párizs</option> <option value="Podgorica">Podgorica</option> <option value="Pozsony">Pozsony</option> <option value="Pristina">Pristina</option> <option value="Reykjavík">Reykjavík</option> <option value="Riga">Riga</option> <option value="Róma">Róma</option> <option value="Saint Helier">Saint Helier</option> <option value="Saint Peter Port">Saint Peter Port</option> <option value="San Marino (San Marino)">San Marino (San Marino)</option> <option value="Stockholm">Stockholm</option> <option value="Szarajevó">Szarajevó</option> <option value="Szkopje">Szkopje</option> <option value="Szófia">Szófia</option> <option value="Tallinn">Tallinn</option> <option value="Tirana">Tirana</option> <option value="Tiraszpol">Tiraszpol</option> <option value="Tórshavn">Tórshavn</option> <option value="Vaduz">Vaduz</option> <option value="Valletta">Valletta</option> <option value="Varsó">Varsó</option> <option value="Vatikán">Vatikán</option> <option value="Vilnius">Vilnius</option> <option value="Zágráb">Zágráb</option>
                 
             </select>
     
-            <label for="arrival">Érkezés ország:</label>
+            <label for="arrival">Hova:</label>
             <select id="arrival" name="arrival" required>
                 <option value="" disabled selected>Válasszon érkezési országot</option>
                 <option value="Amszterdam">Amszterdam</option> <option value="Andorra la Vella">Andorra la Vella</option> <option value="Ankara">Ankara</option> <option value="Athén">Athén</option> <option value="Bécs">Bécs</option> <option value="Belgrád">Belgrád</option> <option value="Berlin">Berlin</option> <option value="Bern">Bern</option> <option value="Brüsszel">Brüsszel</option> <option value="Budapest">Budapest</option> <option value="Bukarest">Bukarest</option> <option value="Chișinău">Chișinău</option> <option value="Douglas (Man)">Douglas (Man)</option> <option value="Dublin">Dublin</option> <option value="Helsinki">Helsinki</option> <option value="Kijev">Kijev</option> <option value="Koppenhága">Koppenhága</option> <option value="Lisszabon">Lisszabon</option> <option value="Ljubljana">Ljubljana</option> <option value="London">London</option> <option value="Luxembourg">Luxembourg</option> <option value="Madrid">Madrid</option> <option value="Minszk">Minszk</option> <option value="Monaco (település)">Monaco (település)</option> <option value="Moszkva">Moszkva</option> <option value="Nicosia">Nicosia</option> <option value="Oslo">Oslo</option> <option value="Párizs">Párizs</option> <option value="Podgorica">Podgorica</option> <option value="Pozsony">Pozsony</option> <option value="Pristina">Pristina</option> <option value="Reykjavík">Reykjavík</option> <option value="Riga">Riga</option> <option value="Róma">Róma</option> <option value="Saint Helier">Saint Helier</option> <option value="Saint Peter Port">Saint Peter Port</option> <option value="San Marino (San Marino)">San Marino (San Marino)</option> <option value="Stockholm">Stockholm</option> <option value="Szarajevó">Szarajevó</option> <option value="Szkopje">Szkopje</option> <option value="Szófia">Szófia</option> <option value="Tallinn">Tallinn</option> <option value="Tirana">Tirana</option> <option value="Tiraszpol">Tiraszpol</option> <option value="Tórshavn">Tórshavn</option> <option value="Vaduz">Vaduz</option> <option value="Valletta">Valletta</option> <option value="Varsó">Varsó</option> <option value="Vatikán">Vatikán</option> <option value="Vilnius">Vilnius</option> <option value="Zágráb">Zágráb</option>
@@ -196,12 +196,7 @@
 
 
             <label for="departureTime">Indulási idő:</label>
-            <select id="departureTime" name="departureTime" required>
-                <option value="" disabled selected>Válassza ki az indulási időt</option>
-                <option value="12:00">12:35</option>
-                <option value="15:00">15:20</option>
-                <option value="18:00">18:00</option>
-                <option value="22:00">22:00</option>
+            <input type="text" id="departureTime" name="departureTime" placeholder="Válassza ki az indulási időt" required>
 
             </select>
     
@@ -213,8 +208,8 @@
                     <h3>Járat részletei</h3>
                     <ul>
                         <li>Indulás: <span id="selectedDepartureTime"></span></li>
-                        <li>Út hossza: 2 óra 37 perc</li>
-                        <li>Gép: XYZ123</li>
+                        <li>Út hossza: <span id="flightDuration"></span></li>
+                        <li>Gép: Wizz Air Airbus A321</li>
                     </ul>
                 </div>
                 <div id="paymentAmount">
@@ -256,9 +251,47 @@
                     modal.style.display = 'none';
                 }
             };
+
+            flatpickr("#departureTime", { enableTime: true, noCalendar: true, dateFormat: "H:i", minTime: "02:00", maxTime: "10:00" });
+
+// Adatbázis létrehozása
+const database = [
+  { departure: "Budapest", arrival: "Amszterdam", duration: "2 óra 30 perc" },
+  { departure: "Budapest", arrival: "Andorra la Vella", duration: "3 óra 15 perc" },
+  { departure: "Budapest", arrival: "Ankara", duration: "2 óra 45 perc" },
+  { departure: "Budapest", arrival: "Athén", duration: "2 óra 15 perc" },
+  { departure: "Budapest", arrival: "Helsinki", duration: "2 óra 20 perc" },
+  { departure: "Szarajevó", arrival: "Róma", duration: "3 óra 20 perc" },
+
+];
+
+function selectFlight() {
+    const selectedDepartureTime = document.getElementById('departureTime').value;
+    const selectedFlight = getRandomFlight();
+    document.getElementById('selectedDepartureTime').innerText = selectedDepartureTime;
+    document.getElementById('flightDuration').innerText = selectedFlight.duration;
+    document.getElementById('paymentModal').style.display = 'flex';
+}
+
+function getRandomFlight() {
+    const randomIndex = Math.floor(Math.random() * database.length);
+    return database[randomIndex];
+}
+
+function processPayment() {
+    document.getElementById('paymentModal').style.display = 'none';
+}
+
+window.onclick = function (event) {
+    const modal = document.getElementById('paymentModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};  
         </script>
     </section>
 </body>
+</html>
 
 
             
